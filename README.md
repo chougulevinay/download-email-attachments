@@ -45,7 +45,8 @@ downloadEmailAttachments({
   timeout: 3000,
   log: {warn: console.warn, debug: console.info, error, console.error, info: console.info },
   since: '2015-01-12',
-  lastSyncIds: ['234', '234', '5345'] // ids already dowloaded and ignored, helpful because since is only supporting dates without time
+  uidvalidity:12345678,
+  lastSyncId: 54321, // Only Ids after 54321 are considered.
   attachmentHandler: function (attachmentData, callback, errorCB) {
     console.log(attachmentData)
     callback()
